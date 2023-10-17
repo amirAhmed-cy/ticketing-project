@@ -23,7 +23,7 @@ public class ProjectController {
     @GetMapping("/create")
     public String createProject(Model model){
         model.addAttribute("project", new ProjectDTO());
-        model.addAttribute("project", projectService.findAll());
+        model.addAttribute("projects", projectService.findAll());
         model.addAttribute("managers", userService.findAll());
         return "/project/create";
     }

@@ -50,7 +50,7 @@ public class UserController {
     public String editUser(@PathVariable("username") String username, Model model){
 
 
-        model.addAttribute("user", userService.findByID(username));
+        model.addAttribute("user", userService.findById(username));
         model.addAttribute("roles", roleService.findAll());
         model.addAttribute("users", userService.findAll());
 
